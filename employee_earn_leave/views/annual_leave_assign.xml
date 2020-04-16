@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+<!-- begin -->
+
+<!-- views -->
+
+<!-- form views begin -->
+        <record id="earn_leave_assign_form" model="ir.ui.view">
+            <field name="name">earn.leave.request.form</field>
+            <field name="model">earn.leave.assign</field>
+            <field name="arch" type="xml">
+            <form string=" Earn Leave Assign Form">
+            <!--  -->
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="earn_leave_days"/>
+                        </group>
+                    </group>
+                  </sheet>
+                </form>
+            </field>
+        </record>
+<!-- form view end -->
+
+
+
+
+
+<!-- Tree views begin -->
+        <record id="earn_leave_assign_leave_tree" model="ir.ui.view">
+            <field name="name">ar_earn_leave.request.tree</field>
+            <field name="model">earn.leave.assign</field>
+            <field name="arch" type="xml">
+                <tree string="Earn Leaves Assign Tree">
+                    <field name="earn_leave_days" type="char"/>
+                </tree>
+            </field>
+        </record>
+<!-- Tree view end -->
+
+
+
+<!-- end views -->
+
+
+<!-- action of the manufacturer menu -->
+   <record id="action_earn_leave_assign" model="ir.actions.act_window">
+        <field name="name">Annual Leave Assign Days</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">earn.leave.assign</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+           Create First Earn Leave !
+          </p>
+        </field>
+    </record>
+
+
+
+
+
+<!-- MenuItems -->
+<menuitem id="annual_leaves" name="Earn Leaves Calculation" parent="hr_holidays.menu_hr_holidays_root" action="action_earn_leave_assign" sequence="100" groups="base.group_erp_manager" />
+<!--<menuitem id="annual_leaves_days" name="Assign Days" parent="annual_leaves" action="action_earn_leave_assign" sequence="1" groups="base.group_erp_manager" />-->
+
+
+<!-- end document  -->
+</odoo>

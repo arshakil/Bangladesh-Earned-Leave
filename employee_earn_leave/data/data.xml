@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<odoo>
+    <data noupdate="1">
+	<record model="hr.holidays.status" id="earn_leaves_status">
+        <field name="name">Earn Leaves</field>
+    </record>
+    <record model="earn.leave.assign" id="earn_leaves_assign">
+        <field name="earn_leave_days">18</field>
+    </record>
+
+    </data>
+</odoo>

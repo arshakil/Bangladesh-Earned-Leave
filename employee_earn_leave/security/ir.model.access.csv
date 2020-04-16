@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_earn_leave_assign_all,access.earn.leave.assign.all,model_earn_leave_assign,,1,1,1,0
+access_earn_leave_assign,access.earn.leave.assign,model_earn_leave_assign,base.group_erp_manager,1,1,1,1
+
