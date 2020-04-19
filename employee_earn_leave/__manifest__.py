@@ -14,7 +14,6 @@
     'maintainer':'Metamorphosis',
     'website':'https://metamorphosis.com.bd',
     'sequence':'-1',
-    'license': 'AGPL-3',
     'depends': ['mail','base','hr_holidays','hr'],
     'data': [
         'security/ir.model.access.csv',
@@ -24,9 +23,8 @@
         'data/scheduler.xml',
     ],
     'demo': [],
-    'images': ['static/static/description/icon.png'],
     'icon': "/employee_earn_leave/static/description/icon.png",
-    'license': "",
+    'images': ['static/static/description/cover.png'],
     'installable': True,
     'application': True,
     "license": "OPL-1",

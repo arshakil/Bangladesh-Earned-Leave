@@ -6,7 +6,7 @@ from datetime import date, datetime
 class EmployeeInheitedModel(models.Model):
     _inherit = 'hr.employee'
 
-    joining_date = fields.Date(string="Joining Date",)
+    joining_date = fields.Date(string="Joining Date",) # if you add in payroll comment this field
     count_earn_days = fields.Integer(string="Annual Days", compute='get_earn_days')
 
     # @api.depends('joining_date')
@@ -140,6 +140,7 @@ class EmployeeInheitedModel(models.Model):
     # Scheduler for Earn Leaves
     @api.model
     def employee_earn_leave_scheduler(self, *args, **kwargs):
+        print("scheduler is working.....")
 
         check_employee_id = self.env['hr.employee'].search([])
 

@@ -1,48 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
- <odoo>
+<odoo>
     <data>
 
         <!--smart button-->
         <record id="btn_smart_button" model="ir.ui.view">
-        <field name="name">earn_leave.view.buttons</field>
-        <field name="model">hr.employee</field>
-        <field name="inherit_id" ref="hr.view_employee_form" />
-        <field name="arch" type="xml">
-            <xpath expr="//div[@name='button_box']" position="inside">
-                <button name="action_earn_leaves" type="object" class="oe_stat_button" icon="fa-archive" string="">
+            <field name="name">earn_leave.view.buttons</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//div[@name='button_box']" position="inside">
+                    <button name="action_earn_leaves" type="object" class="oe_stat_button" icon="fa-archive" string="">
                         <field name="count_earn_days" string="Earn Leaves" widget="statinfo"/>
-                </button>
-            </xpath>
-        </field>
+                    </button>
+                </xpath>
+            </field>
         </record>
 
 
         <!-- Add joining_date field to existing view -->
         <record model="ir.ui.view" id="employee_inherited_form_view">
-        <field name="name">hr.employee.inherited</field>
-        <field name="model">hr.employee</field>
-        <field name="inherit_id" ref="hr.view_employee_form"/>
-        <field name="arch" type="xml">
-            <xpath expr="//field[@name='bank_account_id']" position="after">
-                <field name="joining_date"/>
-            </xpath>
+            <field name="name">hr.employee.inherited</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='bank_account_id']" position="after">
+                    <!--     if you add in payroll comment this field joining_date   -->
 
-            <field name="department_id" position="attributes">
+                    <field name="joining_date"/>
+                </xpath>
 
-            <attribute name="required">True</attribute>
+                <field name="department_id" position="attributes">
+
+                    <attribute name="required">True</attribute>
+
+                </field>
+
 
             </field>
-
-
-
-        </field>
         </record>
-
-
-
-
-
-
 
 
     </data>
