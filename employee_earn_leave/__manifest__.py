@@ -13,7 +13,7 @@
             """,
     'maintainer':'Metamorphosis',
     'website':'https://metamorphosis.com.bd',
-    'sequence':'-1',
+    'sequence':'1',
     'depends': ['mail','base','hr_holidays','hr'],
     'data': [
         'security/ir.model.access.csv',
