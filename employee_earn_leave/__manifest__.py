@@ -24,7 +24,7 @@
     ],
     'demo': [],
     'icon': "/employee_earn_leave/static/description/icon.png",
-    'images': ['static/static/description/cover.png'],
+    'images': ['static/description/cover.png'],
     'installable': True,
     'application': True,
     "license": "OPL-1",
